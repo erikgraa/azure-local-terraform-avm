@@ -1,0 +1,25 @@
+subscription_id                                    = "a94399e3-10ea-4a2c-b226-97375ab5dce9"
+tenant_id                                          = "578acd52-4208-437d-b948-6141f2d548e5"
+
+azure_local_cluster_name                           = "example-azure-local-cluster"
+azure_local_extended_location_custom_location_name = "example-azure-local-cluster-mocarb-CL"
+azure_local_logical_network_name_prefix            = "logical-network"
+azure_local_resource_group_name                    = "example-azure-local-rg"
+azure_local_vm_switch_name                         = "ConvergedSwitch(compute_management_storage)"
+
+azure_local_logical_networks = {
+  1 = {
+    address_prefix       = "192.168.1.0/24"
+    default_gateway      = "192.168.1.1"
+    dns_servers          = ["192.168.1.2"]
+    starting_address     = "192.168.1.100"
+    ending_address       = "192.168.1.110"
+    enable_telemetry     = false
+    ip_allocation_method = "Static"
+    vlan_id              = "10"
+  }
+  2 = {
+    ip_allocation_method = "Dynamic"
+    vlan_id              = "11"
+  }
+}
